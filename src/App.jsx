@@ -8,6 +8,8 @@ import TrainingsSeminars from './Pages/TrainingsSeminars';
 import Certifications from './Pages/Certifications';
 import ContactMe from './Pages/ContactMe';
 import Gallery from './Pages/Gallery';
+import EmailPopup from './Pages/EmailPopup';
+import './Styles/EmailPopup.css';
 import './Styles/styles.css';
 import './Styles/skills.css';
 
@@ -49,18 +51,11 @@ const App = () => {
             <TrainingsSeminars />
             <Certifications />
             <ContactMe />
-
-            <a
-              href="mailto:mjrpasia@tip.edu.ph"
-              className="floating-email"
-              title="Send me an email"
-            >
-              📧
-            </a>
+            <EmailPopup />
           </main>
 
           <footer>
-            <p>© {new Date().getFullYear()} Computer Engineer Portfolio. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Computer Engineering Portfolio. All rights reserved.</p>
           </footer>
 
           <Gallery isOpen={showGallery} onClose={handleCloseGallery} />

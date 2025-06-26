@@ -1,6 +1,6 @@
 /* Skills Modal Styles */
 .view-all-skills {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
     color: white;
     border: none;
     padding: 8px 16px;
@@ -13,7 +13,7 @@
   
   .view-all-skills:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   }
   
   .skills-overlay {
@@ -56,7 +56,7 @@
     padding: 30px 30px 20px;
     border-bottom: 1px solid #eee;
     position: relative;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
     color: white;
     border-radius: 12px 12px 0 0;
   }
@@ -91,7 +91,7 @@
   }
   
   .skills-close:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     transform: scale(1.1);
   }
   
@@ -123,13 +123,13 @@
   .skill-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    border-color: #667eea;
+    border-color: #d97706;
   }
   
   .skill-card.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
     color: white;
-    border-color: #667eea;
+    border-color: #ba6607;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
   }
@@ -154,7 +154,7 @@
     background: #f8f9fa;
     border-radius: 8px;
     padding: 24px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #fed7aa;
   }
   
   .skill-details h3 {
@@ -170,7 +170,7 @@
   }
   
   .skill-level-badge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
     color: white;
     padding: 4px 12px;
     border-radius: 15px;

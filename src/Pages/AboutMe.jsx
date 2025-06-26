@@ -78,7 +78,7 @@ const AboutMe = () => {
 
   const achievements = [
     "2nd Place AI Robotics at MRSP 8th National Skills Competition (2025)",
-    "Led a team for Robotics (2014 to 2018)",
+    "Led a team for JHS Robotics by IT-CUP (2014 to 2018)",
     "Math Quiz Bee Champion Grade 9 (2017)",
   ];
 
@@ -136,7 +136,7 @@ const AboutMe = () => {
           
           <div className="skills-footer">
             <button className="back-button" onClick={closeSkillsModal}>
-              Back to About Me
+              Go Back
             </button>
           </div>
         </div>
