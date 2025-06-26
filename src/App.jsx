@@ -12,6 +12,8 @@ import EmailPopup from './Pages/EmailPopup';
 import './Styles/EmailPopup.css';
 import './Styles/styles.css';
 import './Styles/skills.css';
+import './Styles/gallery.css';
+import './Styles/pages.css';
 
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
