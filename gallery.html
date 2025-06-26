@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Gallery</title>
+  <link rel="stylesheet" href="style.css"> <!-- or your actual CSS file -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #c38ed5;
+      color: #f9edfd;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .gallery {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 2rem auto 0;
+      background: #c38ed5;
+      color: #f9edfd;
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #d7abe6;  
+    }
+
+    .back-container {
+      text-align: center;
+      margin: 2rem auto 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Project Gallery</h1>
+    <p>See samples of my work and past projects.</p>
+  </header>
+
+  <section class="gallery">
+    <img src="logic.png" alt="Logic">
+    <img src="drafting.png" alt="Logic">
+    <img src="drafting4.png" alt="Drafting">
+    <img src="drafting5.png" alt="Drafting">
+    <img src="Flood.png" alt="Flood">
+    <img src="extrarobotics.png" alt="Flood">
+    <img src="Iot1.png" alt="IoT">
+    <img src="Radar.png" alt="IoT">
+    <img src="robotics1.png" alt="Robotics">
+    <img src="robotics2.png" alt="Robotics">
+    <img src="Robot Arm1.png" alt="Robotics">
+    <img src="Robot Arm2.png" alt="Robotics">
+  </section>
+
+  <div class="back-container">
+    <a href="index.html" class="back-button">Back to Portfolio</a>
+  </div>
+
+</body>
+</html>
