@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.0b542d43.css",
-    "main.js": "/Portfolio/static/js/main.c094c8e6.js",
+    "main.css": "/Portfolio/static/css/main.d43b9f88.css",
+    "main.js": "/Portfolio/static/js/main.8941f1c4.js",
     "static/media/RobotArm2.png": "/Portfolio/static/media/RobotArm2.c7de34d616eb2c8c5703.png",
     "static/media/RobotArm1.png": "/Portfolio/static/media/RobotArm1.2ee53dd87975426ca25e.png",
     "static/media/drafting4.png": "/Portfolio/static/media/drafting4.a715292bb039533a2cf7.png",
@@ -17,11 +17,11 @@
     "static/media/myphoto.jpg": "/Portfolio/static/media/myphoto.800c3f65b42bd6f4b218.jpg",
     "static/media/extrarobotics.png": "/Portfolio/static/media/extrarobotics.648182c2b453f449e074.png",
     "index.html": "/Portfolio/index.html",
-    "main.0b542d43.css.map": "/Portfolio/static/css/main.0b542d43.css.map",
-    "main.c094c8e6.js.map": "/Portfolio/static/js/main.c094c8e6.js.map"
+    "main.d43b9f88.css.map": "/Portfolio/static/css/main.d43b9f88.css.map",
+    "main.8941f1c4.js.map": "/Portfolio/static/js/main.8941f1c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b542d43.css",
-    "static/js/main.c094c8e6.js"
+    "static/css/main.d43b9f88.css",
+    "static/js/main.8941f1c4.js"
   ]
 }
