@@ -9,11 +9,13 @@ import Certifications from './Pages/Certifications';
 import ContactMe from './Pages/ContactMe';
 import Gallery from './Pages/Gallery';
 import EmailPopup from './Pages/EmailPopup';
+import BackTopButton from './Pages/BackTopbutton';  
 import './Styles/EmailPopup.css';
 import './Styles/styles.css';
 import './Styles/skills.css';
 import './Styles/gallery.css';
 import './Styles/pages.css';
+import './Styles/BackTopButton.css';
 
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
@@ -54,6 +56,7 @@ const App = () => {
             <Certifications />
             <ContactMe />
             <EmailPopup />
+            <BackTopButton />
           </main>
 
           <footer>

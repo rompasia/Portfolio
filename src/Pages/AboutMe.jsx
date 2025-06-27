@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
 const AboutMe = () => {
-  const [isSkillsOpen, setIsSkillsOpen] = useState(false);
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [isTechnicalSkillsOpen, setIsTechnicalSkillsOpen] = useState(false);
+  const [isSoftSkillsOpen, setIsSoftSkillsOpen] = useState(false);
+  const [selectedTechnicalSkill, setSelectedTechnicalSkill] = useState(null);
+  const [selectedSoftSkill, setSelectedSoftSkill] = useState(null);
 
+  //eslint-disable-next-line
+  /*const gradegree = "Master of Science in Computer Engineering"; 
+  const Specialization = "Mechatronics and Robotics";
+  const gradyear = 2028;*/
   const degree = "Bachelor of Science in Computer Engineering";
   const track = "Robotics";
   const university = "Technological Institute of the Philippines";
@@ -13,7 +19,7 @@ const AboutMe = () => {
   const JuniorHigh = "Manila Cathedral School";
   const graduationYearjhs = 2018;
 
-  const skills = [
+  const technicalSkills = [
     {
       name: "C/C++",
       description: "Proficient in systems programming, embedded programming, and algorithm implementation. Used extensively for robotics control systems and competitive programming.",
@@ -76,46 +82,102 @@ const AboutMe = () => {
     }
   ];
 
+  const softSkills = [
+    {
+      name: "Leadership",
+      description: "Led robotics teams from junior high through college, coordinating team efforts and guiding technical decisions. Experience in project management and team motivation.",
+      level: "Advanced"
+    },
+    {
+      name: "Problem Solving",
+      description: "Strong analytical thinking developed through competitive programming and robotics challenges. Ability to break down complex problems into manageable solutions.",
+      level: "Advanced"
+    },
+    {
+      name: "Team Collaboration",
+      description: "Effective collaboration in multidisciplinary teams, combining technical expertise with communication skills to achieve project goals.",
+      level: "Mid-Advanced"
+    },
+    {
+      name: "Communication",
+      description: "Ability to explain technical concepts to both technical and non-technical audiences. Experience in presenting project results and technical documentation.",
+      level: "Mid-Intermediate"
+    },
+    {
+      name: "Adaptability",
+      description: "Quick to learn new technologies and adapt to changing project requirements. Comfortable working with diverse programming languages and frameworks.",
+      level: "Advanced"
+    },
+    {
+      name: "Critical Thinking",
+      description: "Analytical approach to system design and debugging. Strong logical reasoning skills developed through engineering coursework and practical applications.",
+      level: "Mid-Advanced"
+    },
+    {
+      name: "Time Management",
+      description: "Effective prioritization and scheduling of multiple projects and academic responsibilities. Proven ability to meet deadlines in competitive environments.",
+      level: "Mid-Intermediate"
+    },
+    {
+      name: "Creativity",
+      description: "Innovative approach to technical challenges, finding unique solutions in robotics design and programming. Experience in creative problem-solving competitions.",
+      level: "Mid-Advanced"
+    }
+  ];
+
   const achievements = [
     "2nd Place AI Robotics at MRSP 8th National Skills Competition (2025)",
     "Led a team for JHS Robotics by IT-CUP (2014 to 2018)",
     "Math Quiz Bee Champion Grade 9 (2017)",
   ];
 
-  const openSkillsModal = () => {
-    setIsSkillsOpen(true);
+  const openTechnicalSkillsModal = () => {
+    setIsTechnicalSkillsOpen(true);
   };
 
-  const closeSkillsModal = () => {
-    setIsSkillsOpen(false);
-    setSelectedSkill(null);
+  const closeTechnicalSkillsModal = () => {
+    setIsTechnicalSkillsOpen(false);
+    setSelectedTechnicalSkill(null);
   };
 
-  const selectSkill = (skill) => {
-    setSelectedSkill(skill);
+  const openSoftSkillsModal = () => {
+    setIsSoftSkillsOpen(true);
   };
 
-  const SkillsModal = () => {
-    if (!isSkillsOpen) return null;
+  const closeSoftSkillsModal = () => {
+    setIsSoftSkillsOpen(false);
+    setSelectedSoftSkill(null);
+  };
+
+  const selectTechnicalSkill = (skill) => {
+    setSelectedTechnicalSkill(skill);
+  };
+
+  const selectSoftSkill = (skill) => {
+    setSelectedSoftSkill(skill);
+  };
+
+  const TechnicalSkillsModal = () => {
+    if (!isTechnicalSkillsOpen) return null;
 
     return (
       <div className="skills-overlay">
         <div className="skills-modal">
           <div className="skills-header">
             <h2>Technical Skills</h2>
-            <p>Click on any skill to learn more about my experience</p>
-            <button className="skills-close" onClick={closeSkillsModal}>
+            <p>Click on any skill to learn more about my technical experience</p>
+            <button className="skills-close" onClick={closeTechnicalSkillsModal}>
               ✕
             </button>
           </div>
           
           <div className="skills-content">
             <div className="skills-grid">
-              {skills.map((skill, index) => (
+              {technicalSkills.map((skill, index) => (
                 <div 
                   key={index} 
-                  className={`skill-card ${selectedSkill?.name === skill.name ? 'active' : ''}`}
-                  onClick={() => selectSkill(skill)}
+                  className={`skill-card ${selectedTechnicalSkill?.name === skill.name ? 'active' : ''}`}
+                  onClick={() => selectTechnicalSkill(skill)}
                 >
                   <h3>{skill.name}</h3>
                   <span className="skill-level">{skill.level}</span>
@@ -123,19 +185,68 @@ const AboutMe = () => {
               ))}
             </div>
             
-            {selectedSkill && (
+            {selectedTechnicalSkill && (
               <div className="skill-details">
-                <h3>{selectedSkill.name}</h3>
+                <h3>{selectedTechnicalSkill.name}</h3>
                 <div className="skill-meta">
-                  <span className="skill-level-badge">{selectedSkill.level}</span>
+                  <span className="skill-level-badge">{selectedTechnicalSkill.level}</span>
                 </div>
-                <p>{selectedSkill.description}</p>
+                <p>{selectedTechnicalSkill.description}</p>
               </div>
             )}
           </div>
           
           <div className="skills-footer">
-            <button className="back-button" onClick={closeSkillsModal}>
+            <button className="back-button" onClick={closeTechnicalSkillsModal}>
+              Go Back
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const SoftSkillsModal = () => {
+    if (!isSoftSkillsOpen) return null;
+
+    return (
+      <div className="skills-overlay">
+        <div className="skills-modal">
+          <div className="skills-header">
+            <h2>Soft Skills</h2>
+            <p>Click on any skill to learn more about my interpersonal abilities</p>
+            <button className="skills-close" onClick={closeSoftSkillsModal}>
+              ✕
+            </button>
+          </div>
+          
+          <div className="skills-content">
+            <div className="skills-grid">
+              {softSkills.map((skill, index) => (
+                <div 
+                  key={index} 
+                  className={`skill-card ${selectedSoftSkill?.name === skill.name ? 'active' : ''}`}
+                  onClick={() => selectSoftSkill(skill)}
+                >
+                  <h3>{skill.name}</h3>
+                  <span className="skill-level">{skill.level}</span>
+                </div>
+              ))}
+            </div>
+            
+            {selectedSoftSkill && (
+              <div className="skill-details">
+                <h3>{selectedSoftSkill.name}</h3>
+                <div className="skill-meta">
+                  <span className="skill-level-badge">{selectedSoftSkill.level}</span>
+                </div>
+                <p>{selectedSoftSkill.description}</p>
+              </div>
+            )}
+          </div>
+          
+          <div className="skills-footer">
+            <button className="back-button" onClick={closeSoftSkillsModal}>
               Go Back
             </button>
           </div>
@@ -151,6 +262,11 @@ const AboutMe = () => {
         <div className="details">
           <div className="detail-column">
             <h3>Education</h3>
+         {/*<h4>Graduate School</h4>
+            <p>{gradegree}</p>
+            <p>Specialization: {Specialization}</p>
+            <p>Technological Institute of the Philippines</p>
+            <p>2026 to {gradyear}</p>*/}
             <h4>College</h4>
             <p>{degree}</p>
             <p>Track Elective: {track}</p>
@@ -163,17 +279,30 @@ const AboutMe = () => {
             <p>{JuniorHigh}</p>
             <p>2014 to {graduationYearjhs}</p>
           </div>
+          
           <div className="detail-column">
             <h3>Skills</h3>
+            <h4>Technical Skills</h4>
             <ul className="skills">
-              {skills.slice(0, 6).map(skill => (
+              {technicalSkills.slice(0, 6).map(skill => (
                 <li key={skill.name}>{skill.name}</li>
               ))}
             </ul>
-            <button className="view-all-skills" onClick={openSkillsModal}>
-              View All Skills ({skills.length})
+            <button className="view-all-skills" onClick={openTechnicalSkillsModal}>
+              View All Technical Skills ({technicalSkills.length})
+            </button>
+            
+            <h4 className="soft-skills-header">Soft Skills</h4>
+            <ul className="skills">
+              {softSkills.slice(0, 4).map(skill => (
+                <li key={skill.name}>{skill.name}</li>
+              ))}
+            </ul>
+            <button className="view-all-skills" onClick={openSoftSkillsModal}>
+              View All Soft Skills ({softSkills.length})
             </button>
           </div>
+
           <div className="detail-column">
             <h3>Achievements</h3>
             <ul className="achievements">
@@ -185,7 +314,8 @@ const AboutMe = () => {
         </div>
       </section>
       
-      <SkillsModal />
+      <TechnicalSkillsModal />
+      <SoftSkillsModal />
     </>
   );
 };

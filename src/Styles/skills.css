@@ -41,6 +41,10 @@
       inset 0 0 20px rgba(0, 204, 255, 0.1);
     transform: translateY(-2px);
   }
+  
+  .soft-skills-header {
+    margin-top: 2rem; /* Adjust this value as needed */
+  }
 
   .skills-overlay {
     position: fixed;
