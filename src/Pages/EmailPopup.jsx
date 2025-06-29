@@ -22,7 +22,7 @@ const EmailPopup = () => {
         onClick={handleOpen}
         aria-label="Send me an email"
       >
-        📧
+        💬
       </button>
 
 

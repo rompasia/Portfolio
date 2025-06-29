@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Navbar = ({ onHomeClick }) => {
   const sections = [
@@ -9,6 +9,21 @@ const Navbar = ({ onHomeClick }) => {
     { id: "certifications", label: "Certifications" },
     { id: "contact", label: "Contact Me" },
   ];
+
+  // Add scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Scroll handler: smooth scroll to target section
   const handleNavClick = (e, id) => {

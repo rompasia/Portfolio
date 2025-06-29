@@ -13,6 +13,18 @@ const TrainingsSeminars = () => {
       year: 2024
     },
     {
+      title: "TechnoHealth Computer Curriculum: Database Management",
+      organizer: "Manila Cathedral School",
+      year: "2017"
+    },
+
+    {
+      title: "Robotics Camp",
+      organizer: "Manila Cathedral School",
+      year: "2016"
+    },
+
+    {
       title: "Mathematics Teachers Association of the Philippines (MTAP)",
       organizer: "Manila Cathedral School",
       year: "2015 to 2018"

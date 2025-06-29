@@ -1,4 +1,4 @@
-/* CSS Variables for Watch Dogs Legion Theme */
+/*CSS colors*/
 :root {
   --primary-cyan: #00d4ff;
   --secondary-cyan: #00a8cc;
@@ -176,6 +176,7 @@ nav {
   justify-content: center;
   z-index: 1000 !important;
   position: relative;
+  transition: all 0.4s ease;
 }
 
 /* Animated scan line effect on navbar */
@@ -244,6 +245,19 @@ nav ul li:hover {
   transform: translateY(-2px);
   border-left: 2px solid var(--primary-cyan);
   border-right: 2px solid var(--accent-red);
+}
+
+nav.scrolled {
+  background: linear-gradient(135deg, 
+    rgba(10, 10, 15, 0.6) 0%, 
+    rgba(0, 26, 34, 0.5) 50%, 
+    rgba(5, 5, 8, 0.6) 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(0, 212, 255, 0.4);
+  box-shadow: 
+    0 4px 15px rgba(0, 212, 255, 0.1),
+    0 0 30px rgba(0, 212, 255, 0.05),
+    inset 0 1px 0 rgba(0, 212, 255, 0.05);
 }
 
 section {

@@ -22,12 +22,12 @@ const AboutMe = () => {
   const technicalSkills = [
     {
       name: "C/C++",
-      description: "Proficient in systems programming, embedded programming, and algorithm implementation. Used extensively for robotics control systems and competitive programming.",
+      description: "Systems programming, embedded programming, and algorithm implementation. Used extensively for robotics control systems and competitive programming.",
       level: "Mid-Advanced"
     },
     {
       name: "JavaScript",
-      description: "Full-stack web development with modern frameworks. Experience in DOM manipulation, asynchronous programming, and building interactive web applications.",
+      description: "Full-stack web development with modern frameworks. Experience in asynchronous programming, and building interactive web applications.",
       level: "Mid-Intermediate"
     },
     {
@@ -47,7 +47,7 @@ const AboutMe = () => {
     },
     {
       name: "CSS",
-      description: "Modern styling techniques including Flexbox, Grid, animations, and responsive design. Experience with preprocessors and frameworks.",
+      description: "Modern styling techniques including Color Scheming, Grid, animations, and responsive design. Experience with preprocessors and frameworks.",
       level: "Mid-Intermediate"
     },
     {
@@ -58,12 +58,12 @@ const AboutMe = () => {
     {
       name: "SQL",
       description: "Database design, query optimization, and data management. Experience with MySQL, PostgreSQL, and database integration in applications.",
-      level: "Intermediate"
+      level: "Mid-Intermediate"
     },
     {
       name: "PHP",
-      description: "Server-side web development, API creation, and database integration. Experience with modern PHP frameworks and best practices.",
-      level: "Intermediate"
+      description: "Server-side web development, API integration, and database integration. Experience with modern PHP frameworks and best practices.",
+      level: "Mid-Intermediate"
     },
     {
       name: "IoT",
@@ -72,7 +72,7 @@ const AboutMe = () => {
     },
     {
       name: "Control Systems",
-      description: "Design and implementation of automated control systems for robotics applications. Experience with PID controllers and system modeling.",
+      description: "Design and implementation of automated control systems for robotics applications. Experience with Programmable Logic Circuits (PLC).",
       level: "Low-Intermediate"
     },
     {
@@ -85,18 +85,18 @@ const AboutMe = () => {
   const softSkills = [
     {
       name: "Leadership",
-      description: "Led robotics teams from junior high through college, coordinating team efforts and guiding technical decisions. Experience in project management and team motivation.",
-      level: "Advanced"
+      description: "Led robotics teams from junior high through college, coordinating team efforts and guiding technical decisions. Experience in project management.",
+      level: "Mid-Intermediate"
     },
     {
       name: "Problem Solving",
-      description: "Strong analytical thinking developed through competitive programming and robotics challenges. Ability to break down complex problems into manageable solutions.",
-      level: "Advanced"
+      description: "Analytical thinking developed through competitive programming and robotics challenges. Ability to break down some complex problems into manageable solutions.",
+      level: "Mid-Intermediate"
     },
     {
       name: "Team Collaboration",
       description: "Effective collaboration in multidisciplinary teams, combining technical expertise with communication skills to achieve project goals.",
-      level: "Mid-Advanced"
+      level: "High-Intermediate"
     },
     {
       name: "Communication",
@@ -105,29 +105,29 @@ const AboutMe = () => {
     },
     {
       name: "Adaptability",
-      description: "Quick to learn new technologies and adapt to changing project requirements. Comfortable working with diverse programming languages and frameworks.",
-      level: "Advanced"
+      description: "Quick to learn new technologies and adapt to changing project requirements. Comfortable working with diverse tasks and frameworks.",
+      level: "Low-Advanced"
     },
     {
       name: "Critical Thinking",
       description: "Analytical approach to system design and debugging. Strong logical reasoning skills developed through engineering coursework and practical applications.",
-      level: "Mid-Advanced"
+      level: "Mid-Intermediate"
     },
     {
       name: "Time Management",
-      description: "Effective prioritization and scheduling of multiple projects and academic responsibilities. Proven ability to meet deadlines in competitive environments.",
-      level: "Mid-Intermediate"
+      description: "Prioritization and scheduling of multiple projects and academic responsibilities. Proven ability to meet deadlines in competitive environments.",
+      level: "Low-Intermediate"
     },
     {
       name: "Creativity",
       description: "Innovative approach to technical challenges, finding unique solutions in robotics design and programming. Experience in creative problem-solving competitions.",
-      level: "Mid-Advanced"
+      level: "Low-Intermediate"
     }
   ];
 
   const achievements = [
     "2nd Place AI Robotics at MRSP 8th National Skills Competition (2025)",
-    "Led a team for JHS Robotics by IT-CUP (2014 to 2018)",
+    "Led a team for ITCUP Robotics-ROBOMAN Challenge by TECHNOKIDS and La Salle Computer Society (2014 to 2018)",
     "Math Quiz Bee Champion Grade 9 (2017)",
   ];
 
@@ -164,7 +164,7 @@ const AboutMe = () => {
       <div className="skills-overlay">
         <div className="skills-modal">
           <div className="skills-header">
-            <h2>Technical Skills</h2>
+            <h2>Hard Skills</h2>
             <p>Click on any skill to learn more about my technical experience</p>
             <button className="skills-close" onClick={closeTechnicalSkillsModal}>
               ✕
@@ -282,7 +282,7 @@ const AboutMe = () => {
           
           <div className="detail-column">
             <h3>Skills</h3>
-            <h4>Technical Skills</h4>
+            <h4>Hard Skills</h4>
             <ul className="skills">
               {technicalSkills.slice(0, 6).map(skill => (
                 <li key={skill.name}>{skill.name}</li>
