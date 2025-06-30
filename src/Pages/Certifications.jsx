@@ -13,31 +13,31 @@ const Certifications = () => {
     {
       name: "EF SET English: C2 Proficient",
       year: 2024,
-      file: "./Certifications/EFSET_C2_Cert.pdf",
+      file: "${process.env.PUBLIC_URL}/Certifications/EFSET_C2_Cert.pdf",
       type: "pdf"
     },
     {
       name: "EF SET English: C1 Advanced",
       year: 2024,
-      file: "./Certifications/EFSET_C1_Cert.pdf",
+      file: "${process.env.PUBLIC_URL}/Certifications/EFSET_C1_Cert.pdf",
       type: "pdf"
     },
     {
       name: "CCNA: Switching, Routing, and Wireless Essentials",
       year: 2024,
-      file: "./Certifications/SRWE_cert_pasia.pdf",
+      file: "${process.env.PUBLIC_URL}/Certifications/SRWE_cert_pasia.pdf",
       type: "pdf"
     },
     {
       name: "BOSH1: Safety Officer 1",
       year: 2024,
-      file: "./Certifications/BOSHSO1_Cert_Pasia.png",
+      file: "${process.env.PUBLIC_URL}/Certifications/BOSHSO1_Cert_Pasia.png",
       type: "image"
     },
     {
       name: "Partner: PCAP - Programming Essentials in Python",
       year: 2022,
-      file: "./Certifications/PCAP_cert_PASIA.pdf",
+      file: "${process.env.PUBLIC_URL}/Certifications/PCAP_cert_PASIA.pdf",
       type: "pdf"
     }
   ];
