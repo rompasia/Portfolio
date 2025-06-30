@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.c122b883.css",
-    "main.js": "/Portfolio/static/js/main.bd87e84f.js",
+    "main.js": "/Portfolio/static/js/main.6a2c72a0.js",
     "static/media/RobotArm2.png": "/Portfolio/static/media/RobotArm2.c7de34d616eb2c8c5703.png",
     "static/media/RobotArm1.png": "/Portfolio/static/media/RobotArm1.2ee53dd87975426ca25e.png",
     "static/media/drafting4.png": "/Portfolio/static/media/drafting4.a715292bb039533a2cf7.png",
@@ -11,17 +11,22 @@
     "static/media/drafting.png": "/Portfolio/static/media/drafting.63fee0ba8088be19c6ba.png",
     "static/media/Flood.png": "/Portfolio/static/media/Flood.5f7ab2b0e93456b95342.png",
     "static/media/Radar.png": "/Portfolio/static/media/Radar.028c1d76dc6b065417a8.png",
+    "static/media/BOSHSO1_Cert_Pasia.png": "/Portfolio/static/media/BOSHSO1_Cert_Pasia.aecfb94cf5cc3cfe1f7e.png",
     "static/media/robotics2.png": "/Portfolio/static/media/robotics2.0630b5e1426612644320.png",
     "static/media/robotics1.png": "/Portfolio/static/media/robotics1.7111ecc1b20184169f25.png",
+    "static/media/PCAP_cert_PASIA.pdf": "/Portfolio/static/media/PCAP_cert_PASIA.0e08b9ab02497142714c.pdf",
+    "static/media/SRWE_cert_pasia.pdf": "/Portfolio/static/media/SRWE_cert_pasia.0465cf3718bb8512feee.pdf",
     "static/media/PortLogo.png": "/Portfolio/static/media/PortLogo.2a24bf28119a6fd7c8a6.png",
     "static/media/myphoto.jpg": "/Portfolio/static/media/myphoto.800c3f65b42bd6f4b218.jpg",
+    "static/media/EFSET_C1_Cert.pdf": "/Portfolio/static/media/EFSET_C1_Cert.94ac62cd6cfebb6e8c28.pdf",
+    "static/media/EFSET_C2_Cert.pdf": "/Portfolio/static/media/EFSET_C2_Cert.99d29e99e304ce7656aa.pdf",
     "static/media/extrarobotics.png": "/Portfolio/static/media/extrarobotics.648182c2b453f449e074.png",
     "index.html": "/Portfolio/index.html",
     "main.c122b883.css.map": "/Portfolio/static/css/main.c122b883.css.map",
-    "main.bd87e84f.js.map": "/Portfolio/static/js/main.bd87e84f.js.map"
+    "main.6a2c72a0.js.map": "/Portfolio/static/js/main.6a2c72a0.js.map"
   },
   "entrypoints": [
     "static/css/main.c122b883.css",
-    "static/js/main.bd87e84f.js"
+    "static/js/main.6a2c72a0.js"
   ]
 }
