@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import EFSETC2 from '../Certifications/EFSET_C2_Cert.pdf';
+import EFSETC1 from '../Certifications/EFSET_C1_Cert.pdf';
+import SRWE from '../Certifications/SRWE_cert_pasia.pdf';
+import PCAP from '../Certifications/PCAP_cert_PASIA.pdf';
+import BOSHSO1 from '../Certifications/BOSHSO1_Cert_Pasia.png';
+
 
 const Certifications = () => {
   const [selectedCert, setSelectedCert] = useState(null);
@@ -13,31 +19,31 @@ const Certifications = () => {
     {
       name: "EF SET English: C2 Proficient",
       year: 2024,
-      file: "/Certifications/EFSET_C2_Cert.pdf",
+      file: EFSETC2,
       type: "pdf"
     },
     {
       name: "EF SET English: C1 Advanced",
       year: 2024,
-      file: "/Certifications/EFSET_C1_Cert.pdf",
+      file: EFSETC1,
       type: "pdf"
     },
     {
       name: "CCNA: Switching, Routing, and Wireless Essentials",
       year: 2024,
-      file: "/Certifications/SRWE_cert_pasia.pdf",
+      file: SRWE,
       type: "pdf"
     },
     {
       name: "BOSH1: Safety Officer 1",
       year: 2024,
-      file: "/Certifications/BOSHSO1_Cert_Pasia.png",
+      file: BOSHSO1,
       type: "image"
     },
     {
       name: "Partner: PCAP - Programming Essentials in Python",
       year: 2022,
-      file: "/Certifications/PCAP_cert_PASIA.pdf",
+      file: PCAP,
       type: "pdf"
     }
   ];
