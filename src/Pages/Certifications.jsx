@@ -13,37 +13,37 @@ const Certifications = () => {
     {
       name: "EF SET English: C2 Proficient",
       year: 2024,
-      file: "/Certifications/EFSET_C2_Cert.pdf",
+      file: "./Certifications/EFSET_C2_Cert.pdf",
       type: "pdf"
     },
     {
       name: "EF SET English: C1 Advanced",
       year: 2024,
-      file: "/Certifications/EFSET_C1_Cert.pdf",
+      file: "./Certifications/EFSET_C1_Cert.pdf",
       type: "pdf"
     },
     {
       name: "CCNA: Switching, Routing, and Wireless Essentials",
       year: 2024,
-      file: "/Certifications/SRWE_cert_pasia.pdf",
+      file: "./Certifications/SRWE_cert_pasia.pdf",
       type: "pdf"
     },
     {
       name: "BOSH1: Safety Officer 1",
       year: 2024,
-      file: "/Certifications/BOSHSO1_Cert_Pasia.png",
+      file: "./Certifications/BOSHSO1_Cert_Pasia.png",
       type: "image"
     },
     {
       name: "Partner: PCAP - Programming Essentials in Python",
       year: 2022,
-      file: "/Certifications/PCAP_cert_PASIA.pdf",
+      file: "./Certifications/PCAP_cert_PASIA.pdf",
       type: "pdf"
     }
   ];
 
   const openModal = (cert) => {
-    // Add validation to check if file exists
+    //validation to check if file exists
     if (!cert.file || cert.file === "") {
       alert("Certificate file not available yet.");
       return;
@@ -67,7 +67,7 @@ const Certifications = () => {
     }
   };
 
-  // Modal styles matching your cyberpunk theme
+  // Modal styles 
   const modalOverlayStyle = {
     position: 'fixed',
     top: 0,
