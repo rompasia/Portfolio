@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.c122b883.css",
-    "main.js": "/Portfolio/static/js/main.6a2c72a0.js",
+    "main.css": "/Portfolio/static/css/main.4d21ff8e.css",
+    "main.js": "/Portfolio/static/js/main.3ca33a20.js",
+    "static/media/Snaps5.jpg": "/Portfolio/static/media/Snaps5.2ced7a9181856794b2a4.jpg",
     "static/media/RobotArm2.png": "/Portfolio/static/media/RobotArm2.c7de34d616eb2c8c5703.png",
     "static/media/RobotArm1.png": "/Portfolio/static/media/RobotArm1.2ee53dd87975426ca25e.png",
     "static/media/drafting4.png": "/Portfolio/static/media/drafting4.a715292bb039533a2cf7.png",
@@ -9,11 +10,19 @@
     "static/media/logic.png": "/Portfolio/static/media/logic.6e4fe85de591658baa99.png",
     "static/media/Iot1.png": "/Portfolio/static/media/Iot1.64ec0619fb521a13610b.png",
     "static/media/drafting.png": "/Portfolio/static/media/drafting.63fee0ba8088be19c6ba.png",
+    "static/media/Coffee_me.png": "/Portfolio/static/media/Coffee_me.f7f29ee44fb8ca8db688.png",
+    "static/media/Snaps3.jpg": "/Portfolio/static/media/Snaps3.0b4881aef23a37b39f3b.jpg",
+    "static/media/Snaps2.jpg": "/Portfolio/static/media/Snaps2.629ed050273c147df3ce.jpg",
+    "static/media/Snaps1.jpg": "/Portfolio/static/media/Snaps1.a0bb008430ce6334b2a0.jpg",
+    "static/media/Snaps4.jpg": "/Portfolio/static/media/Snaps4.77611c2197d685b96a23.jpg",
     "static/media/Flood.png": "/Portfolio/static/media/Flood.5f7ab2b0e93456b95342.png",
     "static/media/Radar.png": "/Portfolio/static/media/Radar.028c1d76dc6b065417a8.png",
+    "static/media/AI_RoboticsCompe.jpg": "/Portfolio/static/media/AI_RoboticsCompe.eb13a6e091656b27317f.jpg",
     "static/media/BOSHSO1_Cert_Pasia.png": "/Portfolio/static/media/BOSHSO1_Cert_Pasia.aecfb94cf5cc3cfe1f7e.png",
     "static/media/robotics2.png": "/Portfolio/static/media/robotics2.0630b5e1426612644320.png",
+    "static/media/AI_RoboticsCompe3.jpg": "/Portfolio/static/media/AI_RoboticsCompe3.18f57ac50776755bc00d.jpg",
     "static/media/robotics1.png": "/Portfolio/static/media/robotics1.7111ecc1b20184169f25.png",
+    "static/media/AI_RoboticsCompe2.jpg": "/Portfolio/static/media/AI_RoboticsCompe2.a494953bef5ff3369969.jpg",
     "static/media/PCAP_cert_PASIA.pdf": "/Portfolio/static/media/PCAP_cert_PASIA.0e08b9ab02497142714c.pdf",
     "static/media/SRWE_cert_pasia.pdf": "/Portfolio/static/media/SRWE_cert_pasia.0465cf3718bb8512feee.pdf",
     "static/media/PortLogo.png": "/Portfolio/static/media/PortLogo.2a24bf28119a6fd7c8a6.png",
@@ -22,11 +31,11 @@
     "static/media/EFSET_C2_Cert.pdf": "/Portfolio/static/media/EFSET_C2_Cert.99d29e99e304ce7656aa.pdf",
     "static/media/extrarobotics.png": "/Portfolio/static/media/extrarobotics.648182c2b453f449e074.png",
     "index.html": "/Portfolio/index.html",
-    "main.c122b883.css.map": "/Portfolio/static/css/main.c122b883.css.map",
-    "main.6a2c72a0.js.map": "/Portfolio/static/js/main.6a2c72a0.js.map"
+    "main.4d21ff8e.css.map": "/Portfolio/static/css/main.4d21ff8e.css.map",
+    "main.3ca33a20.js.map": "/Portfolio/static/js/main.3ca33a20.js.map"
   },
   "entrypoints": [
-    "static/css/main.c122b883.css",
-    "static/js/main.6a2c72a0.js"
+    "static/css/main.4d21ff8e.css",
+    "static/js/main.3ca33a20.js"
   ]
 }
