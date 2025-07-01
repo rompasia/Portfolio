@@ -1,10 +1,55 @@
 import React, { useState } from 'react';
+import AI_Robotics1 from '../Me/AI_RoboticsCompe.jpg';
+import AI_Robotics2 from '../Me/AI_RoboticsCompe2.jpg';
+import AI_Robotics3 from '../Me/AI_RoboticsCompe3.jpg';
+import Snaps1 from '../Me/Snaps1.jpg';
+import Snaps2 from '../Me/Snaps2.jpg'; 
+import Snaps3 from '../Me/Snaps3.jpg';
+import Snaps4 from '../Me/Snaps4.jpg';
+import Snaps5 from '../Me/Snaps5.jpg';
+import CoffeeMe from '../Me/Coffee_me.png';
 
 const AboutMe = () => {
   const [isTechnicalSkillsOpen, setIsTechnicalSkillsOpen] = useState(false);
   const [isSoftSkillsOpen, setIsSoftSkillsOpen] = useState(false);
   const [selectedTechnicalSkill, setSelectedTechnicalSkill] = useState(null);
   const [selectedSoftSkill, setSelectedSoftSkill] = useState(null);
+
+  const personalInfo = {
+    age: 23, 
+    hobbies: [
+      "Building and Programming Embedded Systems",
+      "Circuit Design and Electronics",
+      "Gaming",
+      "Sports (Badminton, Bowling, Swimming)",
+      "Music (Listening and Playing Piano)",
+    ],
+    likes: [
+      "OPM, OST, KPOP, POP, RnB",
+      "Robotics and Mechatronics",
+      "Gaming and eSports",
+      "Her",
+      "Automation and IoT projects",
+      "Coffee and Tea",
+    ],
+    dislikes: [
+      "Repetitive manual tasks",
+      "MYself",
+      "My Supervisor",
+      "My Boss"
+    ],
+    photos: [
+      AI_Robotics1,
+      AI_Robotics2,
+      AI_Robotics3, 
+      Snaps1,
+      Snaps2,
+      Snaps3,
+      Snaps4,
+      Snaps5,
+      CoffeeMe
+    ]  
+    };
 
   //eslint-disable-next-line
   /*const gradegree = "Master of Science in Computer Engineering"; 
@@ -159,6 +204,7 @@ const AboutMe = () => {
 
   const TechnicalSkillsModal = () => {
     if (!isTechnicalSkillsOpen) return null;
+    
 
     return (
       <div className="skills-overlay">
@@ -261,6 +307,40 @@ const AboutMe = () => {
         <h2>About Me</h2>
         <div className="details">
           <div className="detail-column">
+            <h3>Profile</h3>
+            <p><strong>Age:</strong> {personalInfo.age}</p>
+            <h4>Hobbies</h4>
+            <ul className="hobbies">
+              {personalInfo.hobbies.map((hobby, index) => (
+                <li key={index}>{hobby}</li>
+              ))}
+            </ul>
+            <h4>Likes</h4>
+            <ul className="likes">
+              {personalInfo.likes.map((like, index) => (
+                <li key={index}>{like}</li>
+              ))}
+            </ul>
+            <h4>Dislikes</h4>
+            <ul className="dislikes">
+              {personalInfo.dislikes.map((dislike, index) => (
+                <li key={index}>{dislike}</li>
+              ))}
+            </ul>
+            <h4>Gallery</h4>
+              <div className="photo-gallery">
+                {personalInfo.photos.map((src, idx) => (
+                  <figure key={idx} className="photo-item">
+                    <img
+                      src={src}
+                      alt={`Personal snapshot ${idx + 1}`}
+                      loading="lazy"
+                    />
+                  </figure>
+                ))}
+              </div>
+          </div>
+          <div className="detail-column">
             <h3>Education</h3>
          {/*<h4>Graduate School</h4>
             <p>{gradegree}</p>
@@ -312,8 +392,17 @@ const AboutMe = () => {
             </ul>
           </div>
         </div>
+        <a
+          href="/Resume_FGPA.pdf"
+          download="Resume_FGPA.pdf"
+          className="download-resume-button"
+        >
+          Download Resume
+        </a>
+
       </section>
       
+      <personalInfo />
       <TechnicalSkillsModal />
       <SoftSkillsModal />
     </>

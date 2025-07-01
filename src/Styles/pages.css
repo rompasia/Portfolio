@@ -234,6 +234,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 1.5rem;
+  text-align:justify;
 }
 
 #about-me .detail-column {
@@ -302,6 +303,54 @@
   line-height: 1.4;
   color: #cccccc;
   font-family: 'Rajdhani', sans-serif;
+}
+
+/* Photo gallery */
+#about-me .photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+#about-me .photo-item {
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+#about-me .photo-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#about-me .photo-item:hover img {
+  transform: scale(1.05);
+}
+
+#about-me .download-resume-button {
+  display: inline-block;
+  margin: 1.5rem 0 0;
+  padding: 0.8rem 1.6rem;
+  background: var(--primary-cyan);
+  color: #0a0a0a;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 2px solid var(--primary-cyan);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#about-me .download-resume-button:hover {
+  background: transparent;
+  color: var(--primary-cyan);
 }
 
 /* Projects, Trainings, Certifications */

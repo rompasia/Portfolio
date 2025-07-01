@@ -175,6 +175,7 @@
     gap: 30px;
     min-height: 400px;
     background: var(--darker-bg);
+    text-align: justify;
   }
 
   .skills-grid {
