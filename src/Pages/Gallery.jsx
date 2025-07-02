@@ -11,6 +11,10 @@ import robotics1 from '../Assets/robotics1.png';
 import robotics2 from '../Assets/robotics2.png';
 import RobotArm1 from '../Assets/RobotArm1.png';
 import RobotArm2 from '../Assets/RobotArm2.png';
+import VPS1 from '../Assets/VPS1.jpg';
+import VPS2 from '../Assets/VPS2.jpg';
+import VPS3 from '../Assets/VPS3.jpg';
+import VPS4 from '../Assets/VPS4.jpg';
 
 
 const Gallery = ({ isOpen, onClose }) => {
@@ -26,7 +30,11 @@ const Gallery = ({ isOpen, onClose }) => {
     { src: robotics1, alt: "Robotics Competition" },
     { src: robotics2, alt: "Robotics Setup" },
     { src: RobotArm1, alt: "6-DOF Robot Arm" },
-    { src: RobotArm2, alt: "Robot Arm Control" }
+    { src: RobotArm2, alt: "Robot Arm Control" },
+    { src: VPS1, alt: "Variable Power Supply1" },
+    { src: VPS2, alt: "VPS Power Supply2" },
+    { src: VPS3, alt: "VPS Power Supply3" },
+    { src: VPS4, alt: "VPS Power Supply4" }
   ];
 
   if (!isOpen) return null;

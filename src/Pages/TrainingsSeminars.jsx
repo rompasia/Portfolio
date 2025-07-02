@@ -2,6 +2,20 @@ import React from 'react';
 
 const TrainingsSeminars = () => {
   const trainings = [
+
+    {
+      title: "Into the Cloud: The Future  of Computing (1/2)",
+      organizer: "Technological Institute of the Philippines - Computer Engineering Department",
+      year: 2025
+    },
+
+    {
+      title: "Transforming Future: Computer Vision and Generative AI in Computer Engineering",
+      organizer: "Technological Institute of the Philippines - Computer Engineering Department",
+      year: 2025
+    },
+
+
     {
       title: "Basic Occupational Safety and Health for Safety Officer 1",
       organizer: "BESO Safety Trainings and Consultancy Services",

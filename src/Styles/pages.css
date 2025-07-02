@@ -232,8 +232,8 @@
 #about-me .details {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1.5rem;
+  gap: 3.5rem;
+  margin-top: 1rem;
   text-align:justify;
 }
 
@@ -257,17 +257,23 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 0.5px;
   background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
 }
 
-#about-me .detail-column h3 {
+#about-me .detail-column h3 h4 h5 {
   font-family: 'Orbitron', monospace;
   color: var(--primary-cyan);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
+
+.extra-curricular p {
+  margin: 0;
+  line-height: 1.5;
+}
+
 
 #about-me ul.skills {
   display: flex;
@@ -317,6 +323,7 @@
   overflow: hidden;
   border-radius: 4px;
   border: 1px solid rgba(0, 255, 136, 0.2);
+  cursor: pointer; 
 }
 
 #about-me .photo-item img {
@@ -329,6 +336,167 @@
 
 #about-me .photo-item:hover img {
   transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+/* Photo Modal Styles */
+.photo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.photo-modal-content {
+  position: relative;
+  max-width: 90% !important;
+  max-height: 90% !important;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #00ff88;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.photo-modal-close:hover {
+  background-color: rgba(0, 255, 136, 0.2);
+}
+
+.photo-modal-prev,
+.photo-modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 255, 136, 0.2);
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.photo-modal-prev:hover,
+.photo-modal-next:hover {
+  background: rgba(0, 255, 136, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.photo-modal-prev {
+  left: -50px;
+}
+
+.photo-modal-next {
+  right: -50px;
+}
+
+.photo-modal-image {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.photo-modal-counter {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00ff88;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+@media (max-width: 768px) {
+  .photo-modal-content {
+    max-width: 95%;
+    max-height: 95%;
+  }
+  
+  .photo-modal-prev {
+    left: -30px;
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+  
+  .photo-modal-next {
+    right: -30px;
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+  
+  .photo-modal-close {
+    top: -30px;
+    right: -10px;
+  }
+  
+  .photo-modal-counter {
+    bottom: -30px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-modal-content {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 10px;
+  }
+  
+  .photo-modal-prev {
+    left: 10px;
+    top: 10px;
+    transform: none;
+  }
+  
+  .photo-modal-next {
+    right: 10px;
+    top: 10px;
+    transform: none;
+  }
+  
+  .photo-modal-close {
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 #about-me .download-resume-button {

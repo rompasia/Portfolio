@@ -29,7 +29,9 @@ const EmailPopup = () => {
       {showPopup && (
         <div className="email-popup-overlay" onClick={handleClose}>
           <div className="email-popup" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={handleClose}>×</button>
+            <button className="close-btn" onClick={handleClose}>
+            ✕
+            </button>
             <form onSubmit={handleSubmit}>
               <label>
                 Your Email:

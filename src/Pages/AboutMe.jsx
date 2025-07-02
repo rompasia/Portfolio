@@ -8,15 +8,25 @@ import Snaps3 from '../Me/Snaps3.jpg';
 import Snaps4 from '../Me/Snaps4.jpg';
 import Snaps5 from '../Me/Snaps5.jpg';
 import CoffeeMe from '../Me/Coffee_me.png';
+import Kape1 from '../Me/Kape1.jpg';
+import Kape2 from '../Me/Kape2.jpg';
+import London1 from '../Me/London1.jpg';
+import piano1 from '../Me/piano1.png';
+import piano2 from '../Me/piano2.png';
+import piano3 from '../Me/piano3.png';
+
 
 const AboutMe = () => {
   const [isTechnicalSkillsOpen, setIsTechnicalSkillsOpen] = useState(false);
   const [isSoftSkillsOpen, setIsSoftSkillsOpen] = useState(false);
   const [selectedTechnicalSkill, setSelectedTechnicalSkill] = useState(null);
   const [selectedSoftSkill, setSelectedSoftSkill] = useState(null);
+  const [isPhotoModalOpen, setIsPhotoModalOpen] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const personalInfo = {
-    age: 23, 
+    age: 23,
+     
     hobbies: [
       "Building and Programming Embedded Systems",
       "Circuit Design and Electronics",
@@ -47,7 +57,13 @@ const AboutMe = () => {
       Snaps3,
       Snaps4,
       Snaps5,
-      CoffeeMe
+      CoffeeMe,
+      Kape1,
+      Kape2,
+      London1,
+      piano1,
+      piano2,
+      piano3
     ]  
     };
 
@@ -57,9 +73,10 @@ const AboutMe = () => {
   const gradyear = 2028;*/
   const degree = "Bachelor of Science in Computer Engineering";
   const track = "Robotics";
-  const university = "Technological Institute of the Philippines";
+  const university = "Technological Institute of the Philippines Manila";
   const graduationYear = "Present";
   const SeniorHigh = "Science Technology Engineering and Mathematics Strand";
+  const SeniorHighSchool = "Mapua University Intramuros";
   const graduationYearshs = 2020;
   const JuniorHigh = "Manila Cathedral School";
   const graduationYearjhs = 2018;
@@ -176,6 +193,34 @@ const AboutMe = () => {
     "Math Quiz Bee Champion Grade 9 (2017)",
   ];
 
+  const openPhotoModal = (photo, index) => {
+    setSelectedPhoto({ src: photo, index });
+    setIsPhotoModalOpen(true);
+  };
+  
+  const closePhotoModal = () => {
+    setIsPhotoModalOpen(false);
+    setSelectedPhoto(null);
+  };
+  
+  const navigatePhoto = (direction) => {
+    if (!selectedPhoto) return;
+    
+    const currentIndex = selectedPhoto.index;
+    let newIndex;
+    
+    if (direction === 'next') {
+      newIndex = currentIndex + 1 >= personalInfo.photos.length ? 0 : currentIndex + 1;
+    } else {
+      newIndex = currentIndex - 1 < 0 ? personalInfo.photos.length - 1 : currentIndex - 1;
+    }
+    
+    setSelectedPhoto({
+      src: personalInfo.photos[newIndex],
+      index: newIndex
+    });
+  };
+
   const openTechnicalSkillsModal = () => {
     setIsTechnicalSkillsOpen(true);
   };
@@ -200,6 +245,141 @@ const AboutMe = () => {
 
   const selectSoftSkill = (skill) => {
     setSelectedSoftSkill(skill);
+  };
+
+   // Photo Modal Component
+   const PhotoModal = () => {
+    if (!isPhotoModalOpen || !selectedPhoto) return null;
+
+    return (
+      <div 
+        className="photo-modal-overlay" 
+        onClick={closePhotoModal}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000,
+          padding: '20px'
+        }}
+      >
+        <div 
+          className="photo-modal-content"
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            position: 'relative',
+            maxWidth: '90vw',
+            maxHeight: '90vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          {/* Close button */}
+          <button
+            onClick={closePhotoModal}
+            style={{
+              position: 'absolute',
+              top: '-40px',
+              right: '0',
+              background: 'transparent',
+              border: 'none',
+              color: '#00ff88',
+              fontSize: '24px',
+              cursor: 'pointer',
+              zIndex: 1001,
+              padding: '5px',
+              borderRadius: '50%',
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            ✕
+          </button>
+
+          {/* Previous button */}
+          <button
+            onClick={() => navigatePhoto('prev')}
+            style={{
+              position: 'absolute',
+              left: '-50px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(0, 255, 136, 0.2)',
+              border: '1px solid #00ff88',
+              color: '#00ff88',
+              fontSize: '20px',
+              cursor: 'pointer',
+              padding: '10px 15px',
+              borderRadius: '50%',
+              zIndex: 1001
+            }}
+          >
+            ‹
+          </button>
+
+          {/* Photo */}
+          <img
+            src={selectedPhoto.src}
+            alt={`Personal snapshot ${selectedPhoto.index + 1}`}
+            style={{
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'contain',
+              borderRadius: '8px',
+              border: '2px solid #00ff88'
+            }}
+          />
+
+          {/* Next button */}
+          <button
+            onClick={() => navigatePhoto('next')}
+            style={{
+              position: 'absolute',
+              right: '-50px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              background: 'rgba(0, 255, 136, 0.2)',
+              border: '1px solid #00ff88',
+              color: '#00ff88',
+              fontSize: '20px',
+              cursor: 'pointer',
+              padding: '10px 15px',
+              borderRadius: '50%',
+              zIndex: 1001
+            }}
+          >
+            ›
+          </button>
+
+          {/* Photo counter */}
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '-40px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              color: '#00ff88',
+              fontSize: '14px',
+              background: 'rgba(0, 0, 0, 0.7)',
+              padding: '5px 10px',
+              borderRadius: '15px'
+            }}
+          >
+            {selectedPhoto.index + 1} / {personalInfo.photos.length}
+          </div>
+        </div>
+      </div>
+    );
   };
 
   const TechnicalSkillsModal = () => {
@@ -308,6 +488,7 @@ const AboutMe = () => {
         <div className="details">
           <div className="detail-column">
             <h3>Profile</h3>
+            <p><strong>Aspiring Field-Programmable Gate Array Engineer</strong></p>            
             <p><strong>Age:</strong> {personalInfo.age}</p>
             <h4>Hobbies</h4>
             <ul className="hobbies">
@@ -330,7 +511,8 @@ const AboutMe = () => {
             <h4>Gallery</h4>
               <div className="photo-gallery">
                 {personalInfo.photos.map((src, idx) => (
-                  <figure key={idx} className="photo-item">
+                  <figure key={idx} className="photo-item"
+                  onClick={() => openPhotoModal(src, idx)}>
                     <img
                       src={src}
                       alt={`Personal snapshot ${idx + 1}`}
@@ -354,12 +536,50 @@ const AboutMe = () => {
             <p>2021 to {graduationYear}</p>
             <h4>Senior High School</h4>
             <p>{SeniorHigh}</p>
+            <p>{SeniorHighSchool}</p>
             <p>2018 to {graduationYearshs}</p>
             <h4>Junior High School</h4>
             <p>{JuniorHigh}</p>
             <p>2014 to {graduationYearjhs}</p>
+            <div className="extra-curricular">
+            <h4>Extra-Curricular</h4>
+            <br></br>
+            <h5>Computer Engineering Student Society</h5>
+            <p>Student Organization at TIP Manila 2022-Present</p>
+            <br></br>
+            <h5>Inhinyera</h5>
+            <p>Student Organization at TIP Manila 2023-Present</p>
+            <br></br>
+            <h5>Microsoft Student Community</h5>
+            <p>Student Organization at TIP Manila 2023-2024</p>
+            <br></br>
+            <h5>Robotics Club</h5>
+            <p>Manila Cathedral School - 2014-2018</p>
+            <br></br>
+            <h5>Reserve Officer Training Course</h5> 
+            <p>Mapua University - 2018-2021</p>
+            <br></br>
+            <h5>Citizenship Army Training</h5> 
+            <p>Cadet-Captain, Intelligence</p>
+            <p>Manila Cathedral School - 2014-2018</p>
           </div>
-          
+            <br></br>
+            <h4>Objective</h4>
+            <p>I’m a Computer Engineering student currently exploring opportunities in FPGA and digital hardware design. 
+              I have a solid background in embedded systems, digital logic, and C/C++ programming, and 
+              I’m now gaining hands-on experience with Verilog and FPGA development using tools like Vivado. 
+              I'm looking forward to learning and exploring more opportunities where I can apply what I know, continue creating 
+              real-world projects, and be part of building smart and practical hardware solutions.
+            </p>
+            <h4>Immersion, Experiences, Others</h4>
+            <br></br>
+            <h5>Creotech Philippines INC.</h5>
+            <p>Worked as a Quality Assurance for Electronic Printed Circuit Board - February 2020 - March 2020</p>
+            <h5>UK Telco Company (NDA)</h5>
+            <p>Worked as a Virtual Assistant. Schedule Appointments, Answer Tickets and Queries. - February 2024 - Present</p>
+            <h5>UK Telco Company (NDA)</h5>
+            <p>Worked as a Customer Service. Answer Calls, create tickets (Fixing of Subscription/s, Data Balances, Customer Information) - August 2023 - January 2024</p>
+          </div>
           <div className="detail-column">
             <h3>Skills</h3>
             <h4>Hard Skills</h4>
@@ -405,6 +625,7 @@ const AboutMe = () => {
       <personalInfo />
       <TechnicalSkillsModal />
       <SoftSkillsModal />
+      <PhotoModal />
     </>
   );
 };

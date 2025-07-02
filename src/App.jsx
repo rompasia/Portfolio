@@ -17,6 +17,7 @@ import './Styles/gallery.css';
 import './Styles/pages.css';
 import './Styles/BackTopButton.css';
 
+
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
   const [showGallery, setShowGallery] = useState(false);
@@ -47,7 +48,7 @@ const App = () => {
         <LandingPage onEnterPortfolio={handleEnterPortfolio} />
       ) : (
         <>
-          <Navbar onHomeClick={handleHomeClick} />
+          <Navbar onHomeClick={handleHomeClick} />               
           <main>
             <Home />
             <AboutMe />
@@ -59,8 +60,10 @@ const App = () => {
             <BackTopButton />
           </main>
 
+
+
           <footer>
-            <p>© {new Date().getFullYear()} Computer Engineering Portfolio. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Computer Engineering Portfolio.</p>
           </footer>
 
           <Gallery isOpen={showGallery} onClose={handleCloseGallery} />

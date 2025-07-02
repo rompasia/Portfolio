@@ -225,7 +225,6 @@ const Certifications = () => {
             <div style={modalBodyStyle}>
               {/* Debug info */}
               <div style={{ color: 'var(--primary-cyan)', marginBottom: '10px', fontSize: '0.9em' }}>
-                Debug: Trying to load: {selectedCert.file}
               </div>
               
               {selectedCert.type === 'pdf' ? (
