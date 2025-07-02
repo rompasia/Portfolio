@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.4d21ff8e.css",
-    "main.js": "/Portfolio/static/js/main.3ca33a20.js",
+    "main.css": "/Portfolio/static/css/main.7e38557f.css",
+    "main.js": "/Portfolio/static/js/main.4296e15a.js",
+    "static/media/Kape1.jpg": "/Portfolio/static/media/Kape1.d767b99d1ec0ea0221f2.jpg",
     "static/media/Snaps5.jpg": "/Portfolio/static/media/Snaps5.2ced7a9181856794b2a4.jpg",
     "static/media/RobotArm2.png": "/Portfolio/static/media/RobotArm2.c7de34d616eb2c8c5703.png",
     "static/media/RobotArm1.png": "/Portfolio/static/media/RobotArm1.2ee53dd87975426ca25e.png",
+    "static/media/Kape2.jpg": "/Portfolio/static/media/Kape2.1b58e7b6ec29bf3343db.jpg",
     "static/media/drafting4.png": "/Portfolio/static/media/drafting4.a715292bb039533a2cf7.png",
     "static/media/drafting5.png": "/Portfolio/static/media/drafting5.ad98edef1cc15810a335.png",
     "static/media/logic.png": "/Portfolio/static/media/logic.6e4fe85de591658baa99.png",
@@ -13,10 +15,18 @@
     "static/media/Coffee_me.png": "/Portfolio/static/media/Coffee_me.f7f29ee44fb8ca8db688.png",
     "static/media/Snaps3.jpg": "/Portfolio/static/media/Snaps3.0b4881aef23a37b39f3b.jpg",
     "static/media/Snaps2.jpg": "/Portfolio/static/media/Snaps2.629ed050273c147df3ce.jpg",
+    "static/media/London1.jpg": "/Portfolio/static/media/London1.2b1672dc71a7a7420fb9.jpg",
     "static/media/Snaps1.jpg": "/Portfolio/static/media/Snaps1.a0bb008430ce6334b2a0.jpg",
     "static/media/Snaps4.jpg": "/Portfolio/static/media/Snaps4.77611c2197d685b96a23.jpg",
+    "static/media/VPS3.jpg": "/Portfolio/static/media/VPS3.d204bfd138a2f0b7f977.jpg",
     "static/media/Flood.png": "/Portfolio/static/media/Flood.5f7ab2b0e93456b95342.png",
+    "static/media/VPS4.jpg": "/Portfolio/static/media/VPS4.c59bcb09951a32ec5b90.jpg",
+    "static/media/VPS1.jpg": "/Portfolio/static/media/VPS1.b868852c6652f7ab1cc5.jpg",
+    "static/media/VPS2.jpg": "/Portfolio/static/media/VPS2.5f3c12ec4b7330e4b6aa.jpg",
     "static/media/Radar.png": "/Portfolio/static/media/Radar.028c1d76dc6b065417a8.png",
+    "static/media/piano3.png": "/Portfolio/static/media/piano3.0e699aef98f309fe9924.png",
+    "static/media/piano2.png": "/Portfolio/static/media/piano2.99db79d37e4f62bad4cb.png",
+    "static/media/piano1.png": "/Portfolio/static/media/piano1.408eb3aea8e02194b514.png",
     "static/media/AI_RoboticsCompe.jpg": "/Portfolio/static/media/AI_RoboticsCompe.eb13a6e091656b27317f.jpg",
     "static/media/BOSHSO1_Cert_Pasia.png": "/Portfolio/static/media/BOSHSO1_Cert_Pasia.aecfb94cf5cc3cfe1f7e.png",
     "static/media/robotics2.png": "/Portfolio/static/media/robotics2.0630b5e1426612644320.png",
@@ -31,11 +41,11 @@
     "static/media/EFSET_C2_Cert.pdf": "/Portfolio/static/media/EFSET_C2_Cert.99d29e99e304ce7656aa.pdf",
     "static/media/extrarobotics.png": "/Portfolio/static/media/extrarobotics.648182c2b453f449e074.png",
     "index.html": "/Portfolio/index.html",
-    "main.4d21ff8e.css.map": "/Portfolio/static/css/main.4d21ff8e.css.map",
-    "main.3ca33a20.js.map": "/Portfolio/static/js/main.3ca33a20.js.map"
+    "main.7e38557f.css.map": "/Portfolio/static/css/main.7e38557f.css.map",
+    "main.4296e15a.js.map": "/Portfolio/static/js/main.4296e15a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d21ff8e.css",
-    "static/js/main.3ca33a20.js"
+    "static/css/main.7e38557f.css",
+    "static/js/main.4296e15a.js"
   ]
 }
