@@ -612,11 +612,9 @@ const AboutMe = () => {
             </ul>
           </div>
         </div>
-        <a
-          href="/Resume_FGPA.pdf"
-          download="Resume_FGPA.pdf"
-          className="download-resume-button"
-        >
+        <a href={`${process.env.PUBLIC_URL}/Resume_FPGA.pdf`} 
+        className='download-resume-button' 
+        download="Resume_FPGA.pdf">
           Download Resume
         </a>
 
