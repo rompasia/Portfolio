@@ -104,17 +104,17 @@ const AboutMe = () => {
     },
     {
       name: "HTML",
-      description: "Semantic markup and web accessibility standards. Experience in creating structured, SEO-friendly web content.",
+      description: "Semantic markup and web accessibility standards. Experience in creating structured, friendly web content.",
       level: "Mid-Intermediate"
     },
     {
       name: "CSS",
-      description: "Modern styling techniques including Color Scheming, Grid, animations, and responsive design. Experience with preprocessors and frameworks.",
+      description: "Modern styling techniques including Color Scheming, Grid, animations, and responsive design. Experience with frameworks and Interface making.",
       level: "Mid-Intermediate"
     },
     {
       name: "Git",
-      description: "Version control, branching strategies, and collaborative development workflows. Experience with GitHub, GitLab, and team-based projects.",
+      description: "Version control, branching strategies, and collaborative development workflows. Experience with GitHub, and team-based projects.",
       level: "Low-Intermediate"
     },
     {
@@ -124,7 +124,7 @@ const AboutMe = () => {
     },
     {
       name: "PHP",
-      description: "Server-side web development, API integration, and database integration. Experience with modern PHP frameworks and best practices.",
+      description: "Server-side web development, API integration, and database integration. Experience with the frameworks and practices.",
       level: "Mid-Intermediate"
     },
     {
