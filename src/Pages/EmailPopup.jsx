@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
 
 const EmailPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -8,24 +7,33 @@ const EmailPopup = () => {
   const handleOpen = () => setShowPopup(true);
   const handleClose = () => setShowPopup(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const form = formRef.current;
 
-    emailjs.sendForm(
-      'mjrpasia_portfolio1',   //  service ID
-      'template_j21mcq7',      // template ID
-      formRef.current,
-      'ueD535RriWVpgq9xu'      //  public key
-    )
-    .then((result) => {
-      console.log('Email sent:', result.text);
-      alert('Message successfully sent!');
-      setShowPopup(false);
-    })
-    .catch((error) => {
-      console.error('Error sending email:', error.text);
+    try {
+      const response = await fetch(
+        'https://formspree.io/f/xblyezwp',  // ← your Form ID
+        {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        }
+      );
+
+      if (response.ok) {
+        alert('Message successfully sent!');
+        form.reset();
+        setShowPopup(false);
+      } else {
+        const errorData = await response.json();
+        console.error('Formspree error:', errorData);
+        alert('Oops, something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
       alert('Oops, something went wrong. Please try again.');
-    });
+    }
   };
 
   return (
@@ -42,16 +50,20 @@ const EmailPopup = () => {
       {showPopup && (
         <div className="email-popup-overlay" onClick={handleClose}>
           <div className="email-popup" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={handleClose}>
-              ✕
-            </button>
+            <button className="close-btn" onClick={handleClose}>✕</button>
             <form ref={formRef} onSubmit={handleSubmit}>
               
+              {/* Optional: disable Formspree’s CAPTCHA */}
+              <input type="hidden" name="_captcha" value="false" />
+
+              {/* Optional: custom email subject */}
+              {/* <input type="hidden" name="_subject" value="New portfolio message!" /> */}
+
               <label>
                 Your Name:
                 <input
                   type="text"
-                  name="user_name"
+                  name="name"
                   placeholder="Rom Pasia"
                   required
                 />
@@ -61,8 +73,8 @@ const EmailPopup = () => {
                 Your Email:
                 <input
                   type="email"
-                  name="user_email"
-                  placeholder="you@email.com"
+                  name="email"
+                  placeholder="you@example.com"
                   required
                 />
               </label>
@@ -71,9 +83,9 @@ const EmailPopup = () => {
                 Message:
                 <textarea
                   name="message"
-                  required
                   rows={4}
-                  placeholder="Your Message..."
+                  placeholder="Your message..."
+                  required
                 />
               </label>
 
