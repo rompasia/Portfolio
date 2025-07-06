@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.7e38557f.css",
-    "main.js": "/Portfolio/static/js/main.6bb480e5.js",
+    "main.css": "/Portfolio/static/css/main.efccef9e.css",
+    "main.js": "/Portfolio/static/js/main.b0cf8a90.js",
     "static/media/Kape1.jpg": "/Portfolio/static/media/Kape1.d767b99d1ec0ea0221f2.jpg",
     "static/media/Snaps5.jpg": "/Portfolio/static/media/Snaps5.2ced7a9181856794b2a4.jpg",
     "static/media/RobotArm2.png": "/Portfolio/static/media/RobotArm2.c7de34d616eb2c8c5703.png",
@@ -35,17 +35,18 @@
     "static/media/AI_RoboticsCompe2.jpg": "/Portfolio/static/media/AI_RoboticsCompe2.a494953bef5ff3369969.jpg",
     "static/media/PCAP_cert_PASIA.pdf": "/Portfolio/static/media/PCAP_cert_PASIA.0e08b9ab02497142714c.pdf",
     "static/media/SRWE_cert_pasia.pdf": "/Portfolio/static/media/SRWE_cert_pasia.0465cf3718bb8512feee.pdf",
+    "static/media/Patty.jpg": "/Portfolio/static/media/Patty.da937f59521bbbfed457.jpg",
     "static/media/PortLogo.png": "/Portfolio/static/media/PortLogo.2a24bf28119a6fd7c8a6.png",
     "static/media/myphoto.jpg": "/Portfolio/static/media/myphoto.800c3f65b42bd6f4b218.jpg",
     "static/media/EFSET_C1_Cert.pdf": "/Portfolio/static/media/EFSET_C1_Cert.94ac62cd6cfebb6e8c28.pdf",
     "static/media/EFSET_C2_Cert.pdf": "/Portfolio/static/media/EFSET_C2_Cert.99d29e99e304ce7656aa.pdf",
     "static/media/extrarobotics.png": "/Portfolio/static/media/extrarobotics.648182c2b453f449e074.png",
     "index.html": "/Portfolio/index.html",
-    "main.7e38557f.css.map": "/Portfolio/static/css/main.7e38557f.css.map",
-    "main.6bb480e5.js.map": "/Portfolio/static/js/main.6bb480e5.js.map"
+    "main.efccef9e.css.map": "/Portfolio/static/css/main.efccef9e.css.map",
+    "main.b0cf8a90.js.map": "/Portfolio/static/js/main.b0cf8a90.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e38557f.css",
-    "static/js/main.6bb480e5.js"
+    "static/css/main.efccef9e.css",
+    "static/js/main.b0cf8a90.js"
   ]
 }
