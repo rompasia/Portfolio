@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ForHer from './ForHer'; 
 import AI_Robotics1 from '../Me/AI_RoboticsCompe.jpg';
 import AI_Robotics2 from '../Me/AI_RoboticsCompe2.jpg';
 import AI_Robotics3 from '../Me/AI_RoboticsCompe3.jpg';
@@ -23,6 +24,7 @@ const AboutMe = () => {
   const [selectedSoftSkill, setSelectedSoftSkill] = useState(null);
   const [isPhotoModalOpen, setIsPhotoModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [showForHer, setShowForHer] = useState(false);
 
   const personalInfo = {
     age: 23,
@@ -38,7 +40,7 @@ const AboutMe = () => {
       "OPM, OST, KPOP, POP, RnB",
       "Robotics and Mechatronics",
       "Gaming and eSports",
-      "Her",
+      { text: "Her", action: () => setShowForHer(true) },
       "Automation and IoT projects",
       "Coffee and Tea",
     ],
@@ -499,7 +501,15 @@ const AboutMe = () => {
             <h4>Likes</h4>
             <ul className="likes">
               {personalInfo.likes.map((like, index) => (
-                <li key={index}>{like}</li>
+                <li key={index}>
+                  {typeof like === 'object' ? (
+                    <button onClick={like.action} className="link-button">
+                      {like.text}
+                    </button>
+                  ) : (
+                    like
+                  )}
+                </li>
               ))}
             </ul>
             <h4>Dislikes</h4>
@@ -617,7 +627,14 @@ const AboutMe = () => {
         download="Resume_FPGA.pdf">
           Download Resume
         </a>
-
+        {showForHer && (
+          <div className="modal-overlay" onClick={() => setShowForHer(false)}>
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
+              <button className="close-button" onClick={() => setShowForHer(false)}>×</button>
+              <ForHer />
+            </div>
+          </div>
+          )}
       </section>
       
       <personalInfo />

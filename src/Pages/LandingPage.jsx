@@ -12,13 +12,47 @@ const LandingPage = ({ onEnterPortfolio }) => {
           className="landing-logo"
         />
       </div>
+
       <div className="landing-content">
-        <h1>Welcome</h1>
+      <div class="glitch-container">
+          Just Portfolio
+        <span>Just Portfolio</span>
+        <span>Just Portfotio</span>
+      </div>
         <div className="landing-buttons">
           <button onClick={onEnterPortfolio}>Enter Portfolio</button>
           <button disabled>More Soon</button>
         </div>
       </div>
+      <div class="loader">
+        <div class="loader-inner"> 
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+        </div>
+      </div>
+
     </div>
   );
 };
