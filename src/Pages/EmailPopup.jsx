@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 const EmailPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const formRef = useRef();
 
   const handleOpen = () => setShowPopup(true);
   const handleClose = () => setShowPopup(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.href = `mailto:mjrpasia@tip.edu.ph?subject=Message from ${email}&body=${encodeURIComponent(message)}`;
-    setShowPopup(false);
+
+    emailjs.sendForm(
+      'mjrpasia_portfolio1',
+      'template_j21mcq7',
+      formRef.current,
+      'ueD535RriWVpgq9xu'
+    )
+    .then((result) => {
+      console.log('Email sent:', result.text);
+      alert('Message successfully sent!');
+      setShowPopup(false);
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error.text);
+      alert('Oops, something went wrong. Please try again.');
+    });
   };
 
   return (
@@ -25,31 +39,20 @@ const EmailPopup = () => {
         💬
       </button>
 
-
       {showPopup && (
         <div className="email-popup-overlay" onClick={handleClose}>
           <div className="email-popup" onClick={e => e.stopPropagation()}>
             <button className="close-btn" onClick={handleClose}>
-            ✕
+              ✕
             </button>
-            <form onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <label>
                 Your Email:
-                <input
-                  type="email"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  required
-                />
+                <input type="email" name="user_email" required />
               </label>
               <label>
                 Message:
-                <textarea
-                  value={message}
-                  onChange={e => setMessage(e.target.value)}
-                  required
-                  rows={4}
-                />
+                <textarea name="message" required rows={4} />
               </label>
               <button type="submit">Send</button>
             </form>
