@@ -12,10 +12,10 @@ const EmailPopup = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'mjrpasia_portfolio1',
-      'template_j21mcq7',
+      'mjrpasia_portfolio1',   //  service ID
+      'template_j21mcq7',      // template ID
       formRef.current,
-      'ueD535RriWVpgq9xu'
+      'ueD535RriWVpgq9xu'      //  public key
     )
     .then((result) => {
       console.log('Email sent:', result.text);
@@ -46,14 +46,37 @@ const EmailPopup = () => {
               ✕
             </button>
             <form ref={formRef} onSubmit={handleSubmit}>
+              
+              <label>
+                Your Name:
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder="Rom Pasia"
+                  required
+                />
+              </label>
+
               <label>
                 Your Email:
-                <input type="email" name="user_email" required />
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder="you@email.com"
+                  required
+                />
               </label>
+
               <label>
                 Message:
-                <textarea name="message" required rows={4} />
+                <textarea
+                  name="message"
+                  required
+                  rows={4}
+                  placeholder="Your Message..."
+                />
               </label>
+
               <button type="submit">Send</button>
             </form>
           </div>
