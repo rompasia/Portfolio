@@ -45,9 +45,10 @@ const AboutMe = () => {
       "Coffee and Tea",
     ],
     dislikes: [
+      "Decaf",
       "Repetitive manual tasks",
-      "MYself",
-      "My Supervisor",
+      "Strong Scent Perfume",
+      "Peace Destroyer",
       "My Boss"
     ],
     photos: [
@@ -490,7 +491,7 @@ const AboutMe = () => {
         <div className="details">
           <div className="detail-column">
             <h3>Profile</h3>
-            <p><strong>Aspiring Field-Programmable Gate Array Engineer</strong></p>            
+            <p><strong>Aspiring Embedded Systems Engineer</strong></p>            
             <p><strong>Age:</strong> {personalInfo.age}</p>
             <h4>Hobbies</h4>
             <ul className="hobbies">
@@ -565,30 +566,20 @@ const AboutMe = () => {
             <br></br>
             <h5>Robotics Club</h5>
             <p>Manila Cathedral School - 2014-2018</p>
-            <br></br>
-            <h5>Reserve Officer Training Course</h5> 
-            <p>Mapua University - 2018-2021</p>
-            <br></br>
-            <h5>Citizenship Army Training</h5> 
-            <p>Cadet-Captain, Intelligence</p>
-            <p>Manila Cathedral School - 2014-2018</p>
           </div>
             <br></br>
             <h4>Objective</h4>
-            <p>I’m a Computer Engineering student currently exploring opportunities in FPGA and digital hardware design. 
-              I have a solid background in embedded systems, digital logic, and C/C++ programming, and 
-              I’m now gaining hands-on experience with Verilog and FPGA development using tools like Vivado. 
-              I'm looking forward to learning and exploring more opportunities where I can apply what I know, continue creating 
-              real-world projects, and be part of building smart and practical hardware solutions.
+            <p>I am a Computer Engineering undergraduate actively pursuing an opportunity in embedded systems
+                engineering. With a solid foundation in embedded systems, digital logic, and C/C++ programming, I
+                have developed hands-on experience through projects involving microcontrollers, sensor integration,
+                and real-time system control. I am eager to apply my technical knowledge in a practical environment,
+                continue building my skills in hardware-software integration, and contribute to the development of
+                reliable and efficient embedded solutions.
             </p>
             <h4>Immersion, Experiences, Others</h4>
             <br></br>
             <h5>Creotech Philippines INC.</h5>
             <p>Worked as a Quality Assurance for Electronic Printed Circuit Board - February 2020 - March 2020</p>
-            <h5>UK Telco Company (NDA)</h5>
-            <p>Worked as a Virtual Assistant. Schedule Appointments, Answer Tickets and Queries. - February 2024 - Present</p>
-            <h5>UK Telco Company (NDA)</h5>
-            <p>Worked as a Customer Service. Answer Calls, create tickets (Fixing of Subscription/s, Data Balances, Customer Information) - August 2023 - January 2024</p>
           </div>
           <div className="detail-column">
             <h3>Skills</h3>
@@ -622,9 +613,9 @@ const AboutMe = () => {
             </ul>
           </div>
         </div>
-        <a href={`${process.env.PUBLIC_URL}/Resume_FPGA.pdf`} 
+        <a href={`${process.env.PUBLIC_URL}/Resume_ESS.pdf`} 
         className='download-resume-button' 
-        download="Resume_FPGA.pdf">
+        download="Resume_ESS.pdf">
           Download Resume
         </a>
         {showForHer && (

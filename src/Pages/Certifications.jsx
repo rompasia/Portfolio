@@ -3,18 +3,27 @@ import EFSETC2 from '../Certifications/EFSET_C2_Cert.pdf';
 import EFSETC1 from '../Certifications/EFSET_C1_Cert.pdf';
 import SRWE from '../Certifications/SRWE_cert_pasia.pdf';
 import PCAP from '../Certifications/PCAP_cert_PASIA.pdf';
+import ENSA from '../Certifications/ENSA_cert_pasia.pdf';
+import CyOps from '../Certifications/CyOps_cert_pasia.pdf';
 import BOSHSO1 from '../Certifications/BOSHSO1_Cert_Pasia.png';
+
 
 
 const Certifications = () => {
   const [selectedCert, setSelectedCert] = useState(null);
 
   const certifications = [
+        {
+      name: "CCNA: CyberOps Associate",
+      year: 2025,
+      file: "CyOps",
+      type: "pdf"
+    },
     {
       name: "CCNA: Enterprise Networking, Security, and Automation",
       year: 2025,
-      file: "",
-      type: ""
+      file: "ENSA",
+      type: "pdf"
     },
     {
       name: "EF SET English: C2 Proficient",
