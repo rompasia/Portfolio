@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.efccef9e.css",
-    "main.js": "/Portfolio/static/js/main.127fd681.js",
+    "main.js": "/Portfolio/static/js/main.1b5fc322.js",
     "static/media/Kape1.jpg": "/Portfolio/static/media/Kape1.d767b99d1ec0ea0221f2.jpg",
     "static/media/Snaps5.jpg": "/Portfolio/static/media/Snaps5.2ced7a9181856794b2a4.jpg",
     "static/media/RobotArm2.png": "/Portfolio/static/media/RobotArm2.c7de34d616eb2c8c5703.png",
@@ -25,6 +25,7 @@
     "static/media/VPS2.jpg": "/Portfolio/static/media/VPS2.5f3c12ec4b7330e4b6aa.jpg",
     "static/media/Radar.png": "/Portfolio/static/media/Radar.028c1d76dc6b065417a8.png",
     "static/media/piano3.png": "/Portfolio/static/media/piano3.0e699aef98f309fe9924.png",
+    "static/media/ENSA_cert_pasia.pdf": "/Portfolio/static/media/ENSA_cert_pasia.c74ce9863aafeb2cadcd.pdf",
     "static/media/piano2.png": "/Portfolio/static/media/piano2.99db79d37e4f62bad4cb.png",
     "static/media/piano1.png": "/Portfolio/static/media/piano1.408eb3aea8e02194b514.png",
     "static/media/AI_RoboticsCompe.jpg": "/Portfolio/static/media/AI_RoboticsCompe.eb13a6e091656b27317f.jpg",
@@ -33,6 +34,7 @@
     "static/media/AI_RoboticsCompe3.jpg": "/Portfolio/static/media/AI_RoboticsCompe3.18f57ac50776755bc00d.jpg",
     "static/media/robotics1.png": "/Portfolio/static/media/robotics1.7111ecc1b20184169f25.png",
     "static/media/AI_RoboticsCompe2.jpg": "/Portfolio/static/media/AI_RoboticsCompe2.a494953bef5ff3369969.jpg",
+    "static/media/CyOps_cert_pasia.pdf": "/Portfolio/static/media/CyOps_cert_pasia.efb3af911d3b44f45d90.pdf",
     "static/media/PCAP_cert_PASIA.pdf": "/Portfolio/static/media/PCAP_cert_PASIA.0e08b9ab02497142714c.pdf",
     "static/media/SRWE_cert_pasia.pdf": "/Portfolio/static/media/SRWE_cert_pasia.0465cf3718bb8512feee.pdf",
     "static/media/Patty.jpg": "/Portfolio/static/media/Patty.da937f59521bbbfed457.jpg",
@@ -43,10 +45,10 @@
     "static/media/extrarobotics.png": "/Portfolio/static/media/extrarobotics.648182c2b453f449e074.png",
     "index.html": "/Portfolio/index.html",
     "main.efccef9e.css.map": "/Portfolio/static/css/main.efccef9e.css.map",
-    "main.127fd681.js.map": "/Portfolio/static/js/main.127fd681.js.map"
+    "main.1b5fc322.js.map": "/Portfolio/static/js/main.1b5fc322.js.map"
   },
   "entrypoints": [
     "static/css/main.efccef9e.css",
-    "static/js/main.127fd681.js"
+    "static/js/main.1b5fc322.js"
   ]
 }
