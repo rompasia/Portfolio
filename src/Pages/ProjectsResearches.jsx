@@ -22,7 +22,18 @@ const ProjectsResearches = ({ onOpenGallery }) => {
       title: "Design and Implementation of a Variable DC Power Supply",
       description: " A reliable and adjustable power supply capable of providing a range of output voltages. Designed to meet performance standards for modern electronics, it achieves stable and consistent operation through accurate voltage regulation and minimal ripple.",
       link: "https://docs.google.com/document/d/1l-Qe4ElKKkGAH99crxNv7_H6n4r5T8sW5pGFprP9Jok/edit?usp=sharing"
-    }
+    },
+    {
+      title: "8-Bit Discrete Logic Computer Architecture",
+      description: "A custom 8-bit microprocessor built from discrete TTL logic gates, featuring a triple 555-timer clock system and a synchronous program counter to demonstrate hardware-level control flow.",
+      link: ""
+    },
+    {
+      title: "Autonomous 4WD Sumo Robot",
+      description: "An autonomous combat robot powered by an Arduino and L298N drivetrain, featuring Direct Port Manipulation for zero-latency motor control and custom software filtering to stabilize analog IR sensor data for aggressive target tracking.",
+      link: ""
+    },
+
   ];
 
   return (
