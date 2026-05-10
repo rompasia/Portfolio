@@ -27,7 +27,7 @@ const AboutMe = () => {
   const [showForHer, setShowForHer] = useState(false);
 
   const personalInfo = {
-    age: 23,
+    age: 24,
      
     hobbies: [
       "Building and Programming Embedded Systems",
@@ -49,7 +49,7 @@ const AboutMe = () => {
       "Repetitive manual tasks",
       "Strong Scent Perfume",
       "Peace Destroyer",
-      "My Boss"
+      "Beer",
     ],
     photos: [
       AI_Robotics1,
@@ -70,7 +70,6 @@ const AboutMe = () => {
     ]  
     };
 
-  //eslint-disable-next-line
   /*const gradegree = "Master of Science in Computer Engineering"; 
   const Specialization = "Mechatronics and Robotics";
   const gradyear = 2028;*/
@@ -499,6 +498,7 @@ const AboutMe = () => {
                 <li key={index}>{hobby}</li>
               ))}
             </ul>
+            <br></br>
             <h4>Likes</h4>
             <ul className="likes">
               {personalInfo.likes.map((like, index) => (
@@ -513,12 +513,14 @@ const AboutMe = () => {
                 </li>
               ))}
             </ul>
+            <br></br>
             <h4>Dislikes</h4>
             <ul className="dislikes">
               {personalInfo.dislikes.map((dislike, index) => (
                 <li key={index}>{dislike}</li>
               ))}
             </ul>
+            <br></br>
             <h4>Gallery</h4>
               <div className="photo-gallery">
                 {personalInfo.photos.map((src, idx) => (
