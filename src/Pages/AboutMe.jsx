@@ -190,6 +190,7 @@ const AboutMe = () => {
   ];
 
   const achievements = [
+    "Champion Sumobot at CPE Symposium at TIP Manila Arlegui (2026)",
     "2nd Place AI Robotics at MRSP 8th National Skills Competition (2025)",
     "Led a team for ITCUP Robotics-ROBOMAN Challenge by TECHNOKIDS and La Salle Computer Society (2014 to 2018)",
     "Math Quiz Bee Champion Grade 9 (2017)",
@@ -557,10 +558,13 @@ const AboutMe = () => {
             <div className="extra-curricular">
             <h4>Extra-Curricular</h4>
             <br></br>
+            <h5>Institute of Computer Engineers of the Philippines</h5>
+            <p>Student Organization in the Philippines 2025-Present</p>
+            <br></br>
             <h5>Computer Engineering Student Society</h5>
             <p>Student Organization at TIP Manila 2022-Present</p>
             <br></br>
-            <h5>Inhinyera</h5>
+            <h5>Inhinyera</h5> 
             <p>Student Organization at TIP Manila 2023-Present</p>
             <br></br>
             <h5>Microsoft Student Community</h5>
