@@ -40,7 +40,7 @@ const AboutMe = () => {
       "OPM, OST, KPOP, POP, RnB",
       "Robotics and Mechatronics",
       "Gaming and eSports",
-      { text: "Her", action: () => setShowForHer(true) },
+      "Her",
       "Automation and IoT projects",
       "Coffee and Tea",
     ],
@@ -580,6 +580,15 @@ const AboutMe = () => {
             <br></br>
             <h5>Creotech Philippines INC.</h5>
             <p>Worked as a Quality Assurance for Electronic Printed Circuit Board - February 2020 - March 2020</p>
+            <br></br>
+            <h5>Edustria 2025</h5>
+            <p>Worked as a Workshop Trainer for Elementary Students about Robotics and introduction to Arduino - October 25, 2025</p>
+            <br></br>
+            <h5>Holy Child Catholic School Work Immersion 2026</h5>
+            <p>Worked as a Workshop Trainer for Senior High School Students about Robotics and introduction to Arduino - January 7, 2026</p>
+            <br></br>
+            <h5>Work Immersion 2026 St. Joseph School and  Victorino Mapa High School</h5>
+            <p>Worked as a Workshop Trainer for Senior High School Students about Robotics and introduction to Arduino - January 14, 2026</p>
           </div>
           <div className="detail-column">
             <h3>Skills</h3>

@@ -4,7 +4,25 @@ const TrainingsSeminars = () => {
   const trainings = [
 
     {
-      title: "Into the Cloud: The Future  of Computing (1/2)",
+      title: "You had me at DATA: Building the Foundation of Data Science and Analytics",
+      organizer: "Technological Institute of the Philippines - Collaborative Analytics and Data Science Society",
+      year: 2026
+    },
+
+    {
+      title: "SUSTAINOVATE 2025: Design Thinking Meets Sustainable Development",
+      organizer: "Technological Institute of the Philippines - Computer Engineering Department",
+      year: 2025
+    },
+
+    {
+      title: "CodeBuild Pocket Edition: Discover the Building Blocks of Mobile Development",
+      organizer: "Technological Institute of the Philippines - Computer Engineering Department",
+      year: 2025
+    },
+
+    {
+      title: "Into the Cloud: The Future  of Computing",
       organizer: "Technological Institute of the Philippines - Computer Engineering Department",
       year: 2025
     },
