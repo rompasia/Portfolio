@@ -4,7 +4,7 @@ import EFSETC1 from '../Certifications/EFSET_C1_Cert.pdf';
 import SRWE from '../Certifications/SRWE_cert_pasia.pdf';
 import PCAP from '../Certifications/PCAP_cert_PASIA.pdf';
 import ENSA from '../Certifications/ENSA_cert_pasia.pdf';
-import CyOps from '../Certifications/CyOps_cert_pasia.pdf';
+import CYOPS from '../Certifications/CyOps_cert_pasia.pdf';
 import BOSHSO1 from '../Certifications/BOSHSO1_Cert_Pasia.png';
 
 
@@ -16,13 +16,13 @@ const Certifications = () => {
         {
       name: "CCNA: CyberOps Associate",
       year: 2025,
-      file: "CyOps",
+      file: CYOPS,
       type: "pdf"
     },
     {
       name: "CCNA: Enterprise Networking, Security, and Automation",
       year: 2025,
-      file: "ENSA",
+      file: ENSA,
       type: "pdf"
     },
     {
