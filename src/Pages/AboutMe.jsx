@@ -1,20 +1,5 @@
 import React, { useState } from 'react';
 import ForHer from './ForHer'; 
-import AI_Robotics1 from '../Me/AI_RoboticsCompe.jpg';
-import AI_Robotics2 from '../Me/AI_RoboticsCompe2.jpg';
-import AI_Robotics3 from '../Me/AI_RoboticsCompe3.jpg';
-import Snaps1 from '../Me/Snaps1.jpg';
-import Snaps2 from '../Me/Snaps2.jpg'; 
-import Snaps3 from '../Me/Snaps3.jpg';
-import Snaps4 from '../Me/Snaps4.jpg';
-import Snaps5 from '../Me/Snaps5.jpg';
-import CoffeeMe from '../Me/Coffee_me.png';
-import Kape1 from '../Me/Kape1.jpg';
-import Kape2 from '../Me/Kape2.jpg';
-import London1 from '../Me/London1.jpg';
-import piano1 from '../Me/piano1.png';
-import piano2 from '../Me/piano2.png';
-import piano3 from '../Me/piano3.png';
 
 
 const AboutMe = () => {
@@ -22,9 +7,6 @@ const AboutMe = () => {
   const [isSoftSkillsOpen, setIsSoftSkillsOpen] = useState(false);
   const [selectedTechnicalSkill, setSelectedTechnicalSkill] = useState(null);
   const [selectedSoftSkill, setSelectedSoftSkill] = useState(null);
-  const [isPhotoModalOpen, setIsPhotoModalOpen] = useState(false);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
-  const [showForHer, setShowForHer] = useState(false);
 
   const personalInfo = {
     age: 24,
@@ -35,39 +17,7 @@ const AboutMe = () => {
       "Gaming",
       "Sports (Badminton, Bowling, Swimming)",
       "Music (Listening and Playing Piano)",
-    ],
-    likes: [
-      "OPM, OST, KPOP, POP, RnB",
-      "Robotics and Mechatronics",
-      "Gaming and eSports",
-      "Her",
-      "Automation and IoT projects",
-      "Coffee and Tea",
-    ],
-    dislikes: [
-      "Decaf",
-      "Repetitive manual tasks",
-      "Strong Scent Perfume",
-      "Peace Destroyer",
-      "Beer",
-    ],
-    photos: [
-      AI_Robotics1,
-      AI_Robotics2,
-      AI_Robotics3, 
-      Snaps1,
-      Snaps2,
-      Snaps3,
-      Snaps4,
-      Snaps5,
-      CoffeeMe,
-      Kape1,
-      Kape2,
-      London1,
-      piano1,
-      piano2,
-      piano3
-    ]  
+    ]
     };
 
   /*const gradegree = "Master of Science in Computer Engineering"; 
@@ -196,34 +146,6 @@ const AboutMe = () => {
     "Math Quiz Bee Champion Grade 9 (2017)",
   ];
 
-  const openPhotoModal = (photo, index) => {
-    setSelectedPhoto({ src: photo, index });
-    setIsPhotoModalOpen(true);
-  };
-  
-  const closePhotoModal = () => {
-    setIsPhotoModalOpen(false);
-    setSelectedPhoto(null);
-  };
-  
-  const navigatePhoto = (direction) => {
-    if (!selectedPhoto) return;
-    
-    const currentIndex = selectedPhoto.index;
-    let newIndex;
-    
-    if (direction === 'next') {
-      newIndex = currentIndex + 1 >= personalInfo.photos.length ? 0 : currentIndex + 1;
-    } else {
-      newIndex = currentIndex - 1 < 0 ? personalInfo.photos.length - 1 : currentIndex - 1;
-    }
-    
-    setSelectedPhoto({
-      src: personalInfo.photos[newIndex],
-      index: newIndex
-    });
-  };
-
   const openTechnicalSkillsModal = () => {
     setIsTechnicalSkillsOpen(true);
   };
@@ -248,141 +170,6 @@ const AboutMe = () => {
 
   const selectSoftSkill = (skill) => {
     setSelectedSoftSkill(skill);
-  };
-
-   // Photo Modal Component
-   const PhotoModal = () => {
-    if (!isPhotoModalOpen || !selectedPhoto) return null;
-
-    return (
-      <div 
-        className="photo-modal-overlay" 
-        onClick={closePhotoModal}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.9)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 1000,
-          padding: '20px'
-        }}
-      >
-        <div 
-          className="photo-modal-content"
-          onClick={(e) => e.stopPropagation()}
-          style={{
-            position: 'relative',
-            maxWidth: '90vw',
-            maxHeight: '90vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          {/* Close button */}
-          <button
-            onClick={closePhotoModal}
-            style={{
-              position: 'absolute',
-              top: '-40px',
-              right: '0',
-              background: 'transparent',
-              border: 'none',
-              color: '#00ff88',
-              fontSize: '24px',
-              cursor: 'pointer',
-              zIndex: 1001,
-              padding: '5px',
-              borderRadius: '50%',
-              width: '40px',
-              height: '40px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-          >
-            ✕
-          </button>
-
-          {/* Previous button */}
-          <button
-            onClick={() => navigatePhoto('prev')}
-            style={{
-              position: 'absolute',
-              left: '-50px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              background: 'rgba(0, 255, 136, 0.2)',
-              border: '1px solid #00ff88',
-              color: '#00ff88',
-              fontSize: '20px',
-              cursor: 'pointer',
-              padding: '10px 15px',
-              borderRadius: '50%',
-              zIndex: 1001
-            }}
-          >
-            ‹
-          </button>
-
-          {/* Photo */}
-          <img
-            src={selectedPhoto.src}
-            alt={`Personal snapshot ${selectedPhoto.index + 1}`}
-            style={{
-              maxWidth: '100%',
-              maxHeight: '100%',
-              objectFit: 'contain',
-              borderRadius: '8px',
-              border: '2px solid #00ff88'
-            }}
-          />
-
-          {/* Next button */}
-          <button
-            onClick={() => navigatePhoto('next')}
-            style={{
-              position: 'absolute',
-              right: '-50px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              background: 'rgba(0, 255, 136, 0.2)',
-              border: '1px solid #00ff88',
-              color: '#00ff88',
-              fontSize: '20px',
-              cursor: 'pointer',
-              padding: '10px 15px',
-              borderRadius: '50%',
-              zIndex: 1001
-            }}
-          >
-            ›
-          </button>
-
-          {/* Photo counter */}
-          <div
-            style={{
-              position: 'absolute',
-              bottom: '-40px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              color: '#00ff88',
-              fontSize: '14px',
-              background: 'rgba(0, 0, 0, 0.7)',
-              padding: '5px 10px',
-              borderRadius: '15px'
-            }}
-          >
-            {selectedPhoto.index + 1} / {personalInfo.photos.length}
-          </div>
-        </div>
-      </div>
-    );
   };
 
   const TechnicalSkillsModal = () => {
@@ -493,49 +280,13 @@ const AboutMe = () => {
             <h3>Profile</h3>
             <p><strong>Aspiring Embedded Systems Engineer</strong></p>            
             <p><strong>Age:</strong> {personalInfo.age}</p>
-            <h4>Hobbies</h4>
-            <ul className="hobbies">
-              {personalInfo.hobbies.map((hobby, index) => (
-                <li key={index}>{hobby}</li>
-              ))}
-            </ul>
-            <br></br>
-            <h4>Likes</h4>
-            <ul className="likes">
-              {personalInfo.likes.map((like, index) => (
-                <li key={index}>
-                  {typeof like === 'object' ? (
-                    <button onClick={like.action} className="link-button">
-                      {like.text}
-                    </button>
-                  ) : (
-                    like
-                  )}
-                </li>
-              ))}
-            </ul>
-            <br></br>
-            <h4>Dislikes</h4>
-            <ul className="dislikes">
-              {personalInfo.dislikes.map((dislike, index) => (
-                <li key={index}>{dislike}</li>
-              ))}
-            </ul>
-            <br></br>
-            <h4>Gallery</h4>
-              <div className="photo-gallery">
-                {personalInfo.photos.map((src, idx) => (
-                  <figure key={idx} className="photo-item"
-                  onClick={() => openPhotoModal(src, idx)}>
-                    <img
-                      src={src}
-                      alt={`Personal snapshot ${idx + 1}`}
-                      loading="lazy"
-                    />
-                  </figure>
+              <h4>Hobbies</h4>
+              <ul className="hobbies">
+                {personalInfo.hobbies.map((hobby, index) => (
+                  <li key={index}>{hobby}</li>
                 ))}
+              </ul>
               </div>
-          </div>
           <div className="detail-column">
             <h3>Education</h3>
          {/*<h4>Graduate School</h4>
@@ -633,20 +384,9 @@ const AboutMe = () => {
         download="Resume_ESS.pdf">
           Download Resume
         </a>
-        {showForHer && (
-          <div className="modal-overlay" onClick={() => setShowForHer(false)}>
-            <div className="modal-content" onClick={e => e.stopPropagation()}>
-              <button className="close-button" onClick={() => setShowForHer(false)}>×</button>
-              <ForHer />
-            </div>
-          </div>
-          )}
       </section>
-      
-      <personalInfo />
       <TechnicalSkillsModal />
       <SoftSkillsModal />
-      <PhotoModal />
     </>
   );
 };
