@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ForHer from './ForHer'; 
 
 
 const AboutMe = () => {
